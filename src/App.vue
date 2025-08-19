@@ -94,14 +94,6 @@ onUnmounted(() => {
     <section id="contact" class="fade-in"><Contact /></section>
 
 
-<!-- 
-
-
- -->
-
-
-
-
 </template>
 
 <style scoped lang="scss">
