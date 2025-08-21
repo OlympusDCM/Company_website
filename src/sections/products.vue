@@ -3,7 +3,6 @@
         <div class="productsSection__content">
             <h2>Some of our Products</h2>
             <div class="carousel">
-                <button class="carousel__arrow" @click="prevProduct">&#8592;</button>
                 <div class="carousel__item">
                     <template v-if="products[current].img">
                         <img :src="products[current].img" :alt="products[current].name" />
@@ -16,12 +15,14 @@
                     <h3>{{ products[current].name }}</h3>
                     <p>Coming soon...</p>
                 </div>
-                <button class="carousel__arrow" @click="nextProduct">&#8594;</button>
+                <div class="carousel__arrows">
+                    <button class="carousel__arrow" @click="prevProduct">&#8592;</button>
+                    <button class="carousel__arrow" @click="nextProduct">&#8594;</button>
+                </div>
             </div>
         </div>
     </div>
 </template>
-
 <script setup>
 import { ref } from 'vue';
 
@@ -71,13 +72,53 @@ function nextProduct() {
 
 
 .carousel {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 80%;
+    padding: 32px 0;
+    width: 98vw;
+    max-width: 520px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1.5rem;
+    box-sizing: border-box;
+// ...existing code...
+}
+
+.carousel__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 70%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        font-size: 1rem;
+        color: #666;
+    }
+}
+.carousel__arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
 }
 .carousel__arrow {
     background: #eee;
@@ -91,33 +132,5 @@ function nextProduct() {
         background: #ccc;
     }
 }
-.carousel__item {
-    text-align: center;
-    min-width: 200px;
-    border-radius: 5px;
-    border: 1px solid gainsboro;
-    width: 80%;
-}
-.carousel__item img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    background: #f5f5f5;
-    border-radius: 1rem;
-}
-
-.carousel__icon-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 120px;
-    margin: 0 auto 1rem auto;
-    background: #f5f5f5;
-    ion-icon {
-        font-size: 5rem;
-        color: #bbb;
-    }
-}
+// ...existing code...
 </style>
