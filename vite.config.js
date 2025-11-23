@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Company_website/', // Change to your repo name
+  base: '/', // Change to your repo name
   plugins: [
     vue()
   ],
