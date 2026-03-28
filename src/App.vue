@@ -15,7 +15,7 @@ const sections = [
     { id: 'home', label: 'Home', icon: 'home-outline' },
     { id: 'about', label: 'About', icon: 'information-circle-outline' },
     { id: 'services', label: 'Services', icon: 'construct-outline' },
-    { id: 'products', label: 'Products', icon: 'cube-outline' },
+    { id: 'products', label: 'Projects', icon: 'cube-outline' },
     { id: 'contact', label: 'Contact', icon: 'call-outline' }
 ];
 const activeSection = ref('');
@@ -104,8 +104,8 @@ onUnmounted(() => {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
+    background: white;
+    color: blue;
     z-index: 1000;
     .navBar__container {
         display: flex;
@@ -113,7 +113,7 @@ onUnmounted(() => {
         justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 40px;
         height: 60px;
         position: relative;
     }
@@ -153,13 +153,14 @@ onUnmounted(() => {
         padding: 0;
         margin: 0;
         li {
-            margin: 0 20px;
+            margin: 0 40px;
             font-family: 'Inter', sans-serif;
             button {
                 background: none;
                 border: none;
-                color: white;
-                font-size: 1rem;
+                color: rgb(0, 102, 204);
+                font-size: 1.2rem;
+                font-weight: bold;
                 cursor: pointer;
                 padding: 8px 16px;
                 border-radius: 4px;
@@ -170,7 +171,8 @@ onUnmounted(() => {
                     font-weight: bold;
                 }
                 &:hover {
-                    background: #555;
+                    background: rgb(0, 102, 204);
+                    color: white;
                 }
             }
         }
@@ -223,8 +225,8 @@ onUnmounted(() => {
         width: 100%;
         margin: auto;
         .MainLogo {
-            width: 300px;
-            height: 300px;
+            width: 450px;
+            height: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
