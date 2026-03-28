@@ -14,7 +14,7 @@
                 >
                     <template v-if="product.img">
                         <div class="mosaic__image-card">
-                            <img :src="product.img" :alt="product.name" />
+                            <img :src="getProductImage(product.img)" :alt="product.name" />
                             <div class="mosaic__overlay">
                                 <span>{{ product.name }}</span>
                             </div>
@@ -37,17 +37,19 @@
 <script setup>
 
 const products = [
-    { img: "/public/pics/EnviosVenezuela.png", name: 'Envios Venezuela', url: 'https://www.enviosvenezuela.es/enviosve/public/index.php' },
-    { img: "/public/pics/Bitsafve.png", name: 'Bitsafve', url: 'https://bitsaveapp.com/es/' },
-    { img: "/public/pics/TuRegistroEscolar.png", name: 'Tu registro escolar', url: 'https://www.turegistroescolar.com/' },
-    { img: "/public/pics/Celucenter.png", name: 'Celufio App', url: 'https://play.google.com/store/apps/details?id=mx.celufio.clientes&hl=es_VE' },
-    { img: "/public/pics/BusinessOptics.png", name: 'Business Optics', url: 'https://www.businessoptics.org/' },
-    { img: "/public/pics/Gather.png", name: 'Gather Technology', url: 'https://www.gatherverify.com/' },
+    { img: "EnviosVenezuela.png", name: 'Envios Venezuela', url: 'https://www.enviosvenezuela.es/enviosve/public/index.php' },
+    { img: "Bitsafve.png", name: 'Bitsafve', url: 'https://bitsaveapp.com/es/' },
+    { img: "TuRegistroEscolar.png", name: 'Tu registro escolar', url: 'https://www.turegistroescolar.com/' },
+    { img: "Celucenter.png", name: 'Celufio App', url: 'https://play.google.com/store/apps/details?id=mx.celufio.clientes&hl=es_VE' },
+    { img: "BusinessOptics.png", name: 'Business Optics', url: 'https://www.businessoptics.org/' },
+    { img: "Gather.png", name: 'Gather Technology', url: 'https://www.gatherverify.com/' },
     { img: null, name: 'Pormesa' },
     { img: null, name: 'Technical' },
     { img: null, name: 'Flare' },
     { img: null, name: 'Morada' }
 ];
+
+const getProductImage = (img) => `/resources/pics/${img.replace(/^\//, '')}`;
 
 function openProductUrl(url) {
     window.open(url, '_blank', 'noopener noreferrer');
