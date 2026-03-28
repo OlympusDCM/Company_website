@@ -37,12 +37,12 @@
 <script setup>
 
 const products = [
-    { img: "../../public/pics/EnviosVenezuela.png", name: 'Envios Venezuela', url: 'https://www.enviosvenezuela.es/enviosve/public/index.php' },
-    { img: "../../public/pics/Bitsafve.png", name: 'Bitsafve', url: 'https://bitsaveapp.com/es/' },
-    { img: "../../public/pics/TuRegistroEscolar.png", name: 'Tu registro escolar', url: 'https://www.turegistroescolar.com/' },
-    { img: "../../public/pics/Celucenter.png", name: 'Celufio App', url: 'https://play.google.com/store/apps/details?id=mx.celufio.clientes&hl=es_VE' },
-    { img: "../../public/pics/BusinessOptics.png", name: 'Business Optics', url: 'https://www.businessoptics.org/' },
-    { img: "../../public/pics/Gather.png", name: 'Gather Technology', url: 'https://www.gatherverify.com/' },
+    { img: "/public/pics/EnviosVenezuela.png", name: 'Envios Venezuela', url: 'https://www.enviosvenezuela.es/enviosve/public/index.php' },
+    { img: "/public/pics/Bitsafve.png", name: 'Bitsafve', url: 'https://bitsaveapp.com/es/' },
+    { img: "/public/pics/TuRegistroEscolar.png", name: 'Tu registro escolar', url: 'https://www.turegistroescolar.com/' },
+    { img: "/public/pics/Celucenter.png", name: 'Celufio App', url: 'https://play.google.com/store/apps/details?id=mx.celufio.clientes&hl=es_VE' },
+    { img: "/public/pics/BusinessOptics.png", name: 'Business Optics', url: 'https://www.businessoptics.org/' },
+    { img: "/public/pics/Gather.png", name: 'Gather Technology', url: 'https://www.gatherverify.com/' },
     { img: null, name: 'Pormesa' },
     { img: null, name: 'Technical' },
     { img: null, name: 'Flare' },
